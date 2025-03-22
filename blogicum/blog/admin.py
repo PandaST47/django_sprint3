@@ -11,11 +11,13 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('title', 'description')
     prepopulated_fields = {'slug': ('title', )}
 
+
 @admin.register(Location)
 class LocationAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_published', 'created_at')
     list_filter = ('is_published', )
     search_fields = ('name', )
+
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):

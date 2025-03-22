@@ -1,13 +1,12 @@
 # blog/views.py
 
-from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from blog.models import Post, Category
 
+
 def index(request):
     current_time = timezone.now()
-
 
     posts = Post.objects.filter(
         pub_date__lte=current_time,
