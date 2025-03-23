@@ -26,4 +26,3 @@ class PostAdmin(admin.ModelAdmin):
     date_hierarchy = 'pub_date'
     readonly_fields = ('created_at',)
 
-
