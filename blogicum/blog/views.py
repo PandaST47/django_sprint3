@@ -49,4 +49,3 @@ def category_posts(request, category_slug):
 
     context = {'category': category, 'post_list': posts}
     return render(request, 'blog/category.html', context)
-
